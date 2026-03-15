@@ -19,12 +19,6 @@ Navigate to the `server` directory and configure the environment:
 ```bash
 cd server
 
-# The .env file is already provided with localhost defaults:
-# PORT=5000
-# MONGODB_URI=mongodb://localhost:27017/settlepay_escrow
-# JWT_SECRET=supersecret...
-# ESCROW_PROVIDER=mock
-# FRONTEND_URL=http://localhost:5173
 
 # Install dependencies (already executed if setup by AI)
 npm install
@@ -59,3 +53,19 @@ To integrate a real provider (like RazorpayX, Castler, or Escrow.com):
 2. `awaiting_payment` -> `in_escrow` (Escrow funded securely)
 3. `in_escrow` -> `awaiting_buyer_confirmation` (Seller handed over item)
 4. `awaiting_buyer_confirmation` -> `completed` (Buyer confirms receipt -> funds released)
+
+
+
+## Seller Account 
+email    : seller@gmail.com
+password : seller
+
+Can create deals and showcase in Marketplace
+
+## Buyer Account
+email    : buyer@gmail.com
+password : buyer1
+
+Buyer can buy the deals that are available in the Marketplace
+
+
