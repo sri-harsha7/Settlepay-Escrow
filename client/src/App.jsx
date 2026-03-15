@@ -23,6 +23,13 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/mock-payment/:id" element={<MockPayment />} />
+            <Route path="*" element={
+              <div className="container flex-col justify-center items-center text-center" style={{ minHeight: 'calc(100vh - 64px)' }}>
+                <h1 className="text-3xl font-bold mb-4">404 - Page Not Found</h1>
+                <p className="text-secondary mb-6">The page you are looking for does not exist or the link is incorrect.</p>
+                <a href="/" className="btn btn-primary">Go Home</a>
+              </div>
+            } />
 
             {/* Protected Routes */}
             <Route element={<ProtectedRoute />}>

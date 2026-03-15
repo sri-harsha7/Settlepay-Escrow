@@ -6,9 +6,10 @@ exports.createEscrowTransaction = async (deal, buyer, seller) => {
     // Simulated external API delay
     await new Promise(resolve => setTimeout(resolve, 500));
 
+    const baseUrl = process.env.FRONTEND_URL.replace(/\/$/, '');
     return {
         providerTransactionId: `mock_t_id_${Date.now()}`,
-        paymentUrl: `${process.env.FRONTEND_URL}/mock-payment/${deal._id}`,
+        paymentUrl: `${baseUrl}/mock-payment/${deal._id}`,
         status: 'payment_initiated'
     };
 };
